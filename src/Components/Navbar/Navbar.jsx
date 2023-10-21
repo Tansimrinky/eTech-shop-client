@@ -10,7 +10,7 @@ const Navbar = () => {
     logOut().then().catch();
   };
   return (
-    <nav className="lg:flex lg:justify-between sticky justify-center p-6 bg-slate-200 bg-rounded">
+    <nav className="lg:flex lg:justify-between sticky justify-center p-6 bg-slate-200 bg-rounded mb-5">
       <div>
         <h2 className="text-5xl font-bold text-center text-">
           ETechShop <span className="text-rose-700">.</span>{" "}

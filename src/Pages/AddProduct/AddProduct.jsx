@@ -104,6 +104,16 @@ const AddProduct = () => {
                   <option value="Phone" className="text-xl font-semibold">
                     Phone
                   </option>
+                  <option value="Tablet" className="text-xl font-semibold">
+                    Tablet
+                  </option>
+                  <option value="tv" className="text-xl font-semibold">
+                    Television
+                  </option>
+                  <option value="camera" className="text-xl font-semibold">
+                    Camera
+                  </option>
+
                   <option value="smartwatch" className="text-xl font-semibold">
                     smartwatch
                   </option>
