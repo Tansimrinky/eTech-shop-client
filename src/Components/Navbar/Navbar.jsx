@@ -21,6 +21,15 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register">Register</NavLink>
+        {
+            user && (<> <li className="list-none">
+            <NavLink to="/review">Customer Review</NavLink>
+          </li>
+          <li className="list-none">
+              <NavLink to="/addproduct">Add Product</NavLink>
+              </li>
+          </>)
+        }
         </div>
 
         <div className="flex gap-6">

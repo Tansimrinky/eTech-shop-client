@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brand_name": "Samsung",
+      "brand_image": "https://i.ibb.co/7YY2QbN/images.jpg"
+    },
+    {
+      "id": 2,
+      "brand_name": "Vivo",
+      "brand_image": "https://i.ibb.co/g409yhC/vivo-brand-logo-phone-symbol-name-white-design-vector-46234591.jpg"
+    },
+    {
+      "id": 3,
+      "brand_name": "Apple",
+      "brand_image": "https://i.ibb.co/g409yhC/vivo-brand-logo-phone-symbol-name-white-design-vector-46234591.jpg"
+    },
+    {
+      "id": 4,
+      "brand_name": "Sony",
+      "brand_image": "https://i.ibb.co/dckJfMp/Sony.jpg"
+    },
+    {
+      "id": 5,
+      "brand_name": "LG",
+      "brand_image": "https://i.ibb.co/S3p1ngN/download.png"
+    },
+    {
+      "id": 6,
+      "brand_name": "Xiaomi",
+      "brand_image": "https://i.ibb.co/fY4bxpv/Xiaomi-logo-svg.png"
+    }
+  ]
+  

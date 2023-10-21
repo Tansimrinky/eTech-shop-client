@@ -16,6 +16,7 @@ const AuthProvider = ({children}) => {
 
    const [user, setUser ] = useState(null)
    const [loading, setLoading] = useState(true)
+   const [brands, setBrands] = useState()
  
    const createUser = (email, password) => {
   
@@ -32,6 +33,12 @@ const AuthProvider = ({children}) => {
    }
 
    useEffect( () =>{
+    fetch("http://localhost:5000/brands")
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      setBrands(data)
+    })
     const unSubscribe = onAuthStateChanged(auth, currentUser =>{
         setUser(currentUser)
         setLoading(false)
@@ -49,6 +56,7 @@ const AuthProvider = ({children}) => {
 
 
    const authInfo = {
+    brands,
     user,
     loading, 
     createUser,
