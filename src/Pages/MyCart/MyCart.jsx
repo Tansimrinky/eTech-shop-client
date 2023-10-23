@@ -6,6 +6,7 @@ import { useContext } from "react";
 import MyCartCard from "../../Components/MyCartCard/MyCartCard";
 import NoData from "../../Components/NoData/NoData";
 
+
 const MyCart = () => {
     const { user} = useContext(AuthContext)
 
@@ -22,12 +23,14 @@ const MyCart = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-between">
+    
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ml-20">
       { filteredProduct.length > 0 ? (
-        filteredProduct.map(product => <MyCartCard key={product._id} product={product}></MyCartCard>)) : (<NoData></NoData>)
+      filteredProduct.map(product =>  <MyCartCard key={product._id} product={product}></MyCartCard> ) ) : (<NoData></NoData>)
         
      }
       </div>
+  
     </div>
   );
 };

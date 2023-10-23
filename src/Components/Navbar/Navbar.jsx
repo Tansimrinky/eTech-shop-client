@@ -14,11 +14,11 @@ const Navbar = () => {
     <nav className="lg:flex lg:justify-between sticky justify-center p-6 bg-slate-200 bg-rounded mb-5">
       <div>
         <h2 className="text-5xl font-bold text-center text-">
-          ETechShop <span className="text-rose-700">.</span>{" "}
+          ETechShop<span className="text-rose-700">.</span>{" "}
         </h2>
       </div>
      
-        <div className="flex flex-center gap-6 items-center">
+        <div className="flex flex-center font-bold text-slate-500 gap-6 items-center">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register">Register</NavLink>
@@ -35,7 +35,7 @@ const Navbar = () => {
         }
         </div>
 
-        <div className="flex gap-6">
+        <div className="flex gap-6 items-center">
           {user ? (
             <>
               {" "}
@@ -49,7 +49,7 @@ const Navbar = () => {
             <FaUserCircle className="h-[50px] w-[50px]"></FaUserCircle>
           )}
           {user ? (
-            <div className="text-slate-700 font-semibold">
+            <div className="text-slate-700 text-center font-semibold">
               {user.displayName}
             </div>
           ) : (

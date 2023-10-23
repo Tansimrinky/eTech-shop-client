@@ -4,7 +4,7 @@ import { FaCartPlus } from 'react-icons/fa';
 import { useLoaderData,  useParams} from "react-router-dom";
 import {useContext} from 'react'
 import { AuthContext } from "../../../Provider/AuthProvider";
-import { Navigate } from 'react-router-dom';
+
 import Swal from 'sweetalert2'
 
 const DetailsCard = ({ detail }) => {
@@ -19,13 +19,11 @@ const DetailsCard = ({ detail }) => {
     console.log(productsAll)
 
     const handleMyCart = () => {
-        if(!user){
-            <Navigate state={location.pathname} to="/login"></Navigate>
-        }
-    
-   
-        const productInCart = productsAll.filter(product => product._id == _id)
+       
+        const productInCart = productsAll.filter(product => product._id === _id)
         const productObj = productInCart[0]
+       
+        delete productObj._id
         const newProperty = 'email';
         const propertyValue = `${user.email}`
         productObj[newProperty] = propertyValue
@@ -49,8 +47,9 @@ const DetailsCard = ({ detail }) => {
                     timer: 1500
                   })
             }
+          
         })
-        
+       
     }
   return (
     <div>

@@ -43,9 +43,9 @@ const BrandProductCard = ({ product }) => {
               <Link to={`/details/${_id}`}><button>
                 <div className="badge badge-outline">Details</div>
               </button></Link>
-              <button>
+             <Link to={(`/update/${_id}`)}> <button>
                 <div className="badge badge-outline">Update </div>
-              </button>
+              </button></Link>
             </div>
             </div>
           </div>
