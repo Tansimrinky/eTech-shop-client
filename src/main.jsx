@@ -15,6 +15,10 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import BrandsProducts from './Pages/BrandsProducts/BrandsProducts';
 import Brands from './Components/Brands/Brands';
+import Details from './Pages/Details/Details';
+import DetailsCard from './Components/DetailsCard/DetailsCard';
+import MyCart from './Pages/MyCart/MyCart';
+
 
 const router = createBrowserRouter([
   {
@@ -49,6 +53,23 @@ const router = createBrowserRouter([
         path: '/brands/:brands_name',
         element: <BrandsProducts></BrandsProducts>,
         loader: () => fetch('http://localhost:5000/products')
+      },
+      {
+        path: '/details/:_id',
+        element: <Details></Details>,
+        loader: () => fetch('http://localhost:5000/products')
+
+      },
+      {
+        path: '/details/:_id',
+        element: <DetailsCard></DetailsCard>,
+        loader: () => fetch('http://localhost:5000/products')
+
+      },
+      {
+        path: '/mycart',
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/mycart')
       }
     ]
   },

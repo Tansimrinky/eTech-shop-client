@@ -1,9 +1,24 @@
 import { AiFillStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const BrandProductCard = ({ product }) => {
   console.log(product);
-  const { BrandName, description, img, name, price, rating, types } =
+  const {_id, BrandName, description, img, name, price, rating, types } =
     product || {};
+
+  //  const handleDetails = (_id) => {
+  //   fetch(`http://localhost:5000/products/${_id}`, {
+  //     method: 'GET',
+  //     headers: {
+  //       'content-type' : 'application/json'
+  //     },
+  //     body: JSON.stringify(_id)
+  //   })
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     console.log(data)
+  //   })
+  //  } 
 
   return (
     <div>
@@ -25,15 +40,15 @@ const BrandProductCard = ({ product }) => {
               <div>{rating}/5</div>
             </div>
             <div className="card-actions justify-end">
+              <Link to={`/details/${_id}`}><button>
+                <div className="badge badge-outline">Details</div>
+              </button></Link>
               <button>
-                <div className="badge badge-outline">Fashion</div>
-              </button>
-              <button>
-                <div className="badge badge-outline">Products</div>
+                <div className="badge badge-outline">Update </div>
               </button>
             </div>
+            </div>
           </div>
-        </div>
       ) : (
         <p>No data Found</p>
       )}

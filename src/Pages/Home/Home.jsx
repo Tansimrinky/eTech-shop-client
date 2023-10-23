@@ -3,6 +3,7 @@
 import { useLoaderData } from "react-router-dom";
 import Brands from "../../Components/Brands/Brands";
 import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             brands.map(brand => <Brands key={brand.id} brand={brand}></Brands>)
           }
       </div>
+      <Footer></Footer>
     </div>
   );
 };

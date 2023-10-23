@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import Navbar from "../../Components/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import Footer from "../../Components/Footer/Footer";
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
@@ -106,6 +107,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

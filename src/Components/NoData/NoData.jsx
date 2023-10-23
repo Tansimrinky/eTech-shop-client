@@ -1,12 +1,8 @@
 const NoData = () => {
   return (
-    <div className="w-full flex justify-center my-5 ml-80">
+    <div className="w-full">
       <div>
-      <img
-        src="https://i.ibb.co/jRV5FmB/fav-3.png"
-        alt=""
-        className=" h-[500px] w-full"
-      />
+      <p className="text-5xl font-bold text-center">No Data Saved</p>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import {useEffect , useState } from "react";
-import Swal from "sweetalert2";
 import BrandProductCard from "../BrandProductCard/BrandProductCard";
 import Slider from "../../Components/Slider/Slider";
 import NoData from "../../Components/NoData/NoData";

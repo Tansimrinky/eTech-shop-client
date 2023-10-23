@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { BsFillCartCheckFill } from 'react-icons/bs';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -22,12 +23,14 @@ const Navbar = () => {
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register">Register</NavLink>
         {
-            user && (<> <li className="list-none">
-            <NavLink to="/review">Customer Review</NavLink>
-          </li>
-          <li className="list-none">
-              <NavLink to="/addproduct">Add Product</NavLink>
+            user && (<>
+             <li className="list-none">
+              <NavLink to="/addproduct">Add Product </NavLink>
               </li>
+             <li className="list-none flex">
+            <NavLink to="/mycart"> <div className="flex items-center gap-1"><div>My cart</div> <div><BsFillCartCheckFill></BsFillCartCheckFill></div></div> </NavLink>
+          </li>
+         
           </>)
         }
         </div>
