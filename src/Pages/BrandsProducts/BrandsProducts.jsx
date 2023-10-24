@@ -4,6 +4,7 @@ import {useEffect , useState } from "react";
 import BrandProductCard from "../BrandProductCard/BrandProductCard";
 import Slider from "../../Components/Slider/Slider";
 import NoData from "../../Components/NoData/NoData";
+import Footer from "../../Components/Footer/Footer";
 
 
 
@@ -36,6 +37,7 @@ const BrandsProducts = () => {
            }
         
            </div>
+           <Footer></Footer>
         </div>
     );
 };

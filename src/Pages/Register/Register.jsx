@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
 
 const Register = () => {
 
@@ -51,9 +52,9 @@ const Register = () => {
 
 
     return (
-        <div>
+        <div className="my-5">
           <Navbar></Navbar>
-            <div style={{backgroundImage: "url('https://i.ibb.co/cvRfQ6m/360-F-119115529-m-Enw3l-Gp-Ldl-Dkf-Lg-Rc-VSb-FRu-Vl6s-MDty.jpg')"}} className="sm:h-[700px] lg:h-screen bg-cover">
+            <div style={{backgroundImage: "url('https://i.ibb.co/Wvqh8BG/images-1.jpg')"}} className="sm:h-[700px] lg:h-screen bg-cover">
         <div className="hero h-fit">
           <div className="hero-content flex-col ">
             <div className="text-center lg:text-left">
@@ -119,6 +120,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+    <Footer></Footer>
         </div>
     );
 };

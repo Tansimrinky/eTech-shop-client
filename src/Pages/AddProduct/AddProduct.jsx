@@ -1,3 +1,4 @@
+import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import Swal from "sweetalert2";
 
@@ -174,28 +175,11 @@ const AddProduct = () => {
          
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
 
-{
-  /* <input type="url" name="img" id="" />
-<br />
-<input type="text" name="name" />
-<br />
-<input type="text" name="brand_name" />
-<br />
-<label>Type of products:</label>
-<select name="types">
-  <option value="Phone">Phone</option>
-  <option value="Computer">Computer</option>
-  <option value="Laptop" selected>
-    Laptop
-  </option>
-  <option value="Headphone" selected>
-    Headphone
-  </option>
- */
-}
+
 
 export default AddProduct;

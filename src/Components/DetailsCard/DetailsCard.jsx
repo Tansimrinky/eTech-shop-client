@@ -57,7 +57,7 @@ const DetailsCard = ({ detail }) => {
       <h2 className="text-3xl font-bold text-center">
         Detailed information of {name}
       </h2>
-      <div className="card card-side  w-[800px] bg-base-100 shadow-xl mt-10">
+      <div className="card  w-screen bg-base-100 shadow-xl mt-10">
         <figure>
           <img
             src={img}

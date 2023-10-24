@@ -9,7 +9,7 @@ const Navbar = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme")? localStorage.getItem("theme") : "light" )
 
   const handleToggle = (e) => {
-    if(e.target.cheked){
+    if(e.target.checked){
       setTheme("dark")
     } else {
       setTheme("light")
@@ -34,7 +34,7 @@ const Navbar = () => {
         </h2>
       </div>
 
-      <div className="flex flex-center font-bold text-slate-500 gap-6 items-center">
+      <div className="grid grid-cols-3 mt-4 md:grid-cols-5 flex-center font-bold text-slate-500 gap-6 items-center">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register">Register</NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
         )}
       </div>
 
-      <div className="flex gap-6 items-center">
+      <div className="flex mt-4 gap-6 items-center">
         {user ? (
           <>
             {" "}

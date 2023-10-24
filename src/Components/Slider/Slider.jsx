@@ -32,7 +32,7 @@ const Slider = () => {
         </div>
         <div id="slide3" className="carousel-item relative w-full">
           <img
-            src="https://i.ibb.co/Vtjdtth/4590878.jpg"
+            src="https://i.ibb.co/mN9ysmg/the-web-pages-are-on-the-laptop-screen-and-the-mobile-phone-is-lying-modern-technological-background.jpg"
             className="w-full"
           />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

@@ -1,29 +1,18 @@
 import { AiFillStar } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
+
 const BrandProductCard = ({ product }) => {
   console.log(product);
   const {_id, BrandName, description, img, name, price, rating, types } =
     product || {};
 
-  //  const handleDetails = (_id) => {
-  //   fetch(`https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products/${_id}`, {
-  //     method: 'GET',
-  //     headers: {
-  //       'content-type' : 'application/json'
-  //     },
-  //     body: JSON.stringify(_id)
-  //   })
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     console.log(data)
-  //   })
-  //  } 
+  
 
   return (
     <div>
       {product ? (
-        <div className="card w-[500px] h-[800px] bg-base-100 shadow-xl my-10">
+        <div className="card md:w-[500px] h-[800px] bg-base-100 shadow-xl my-10">
           <figure>
             <img src={img} alt="Shoes" className="h-96" />
           </figure>
@@ -52,6 +41,7 @@ const BrandProductCard = ({ product }) => {
       ) : (
         <p>No data Found</p>
       )}
+      
     </div>
   );
 };

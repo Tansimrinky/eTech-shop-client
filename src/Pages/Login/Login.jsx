@@ -50,7 +50,7 @@ const Login = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div style={{backgroundImage: "url('https://i.ibb.co/cvRfQ6m/360-F-119115529-m-Enw3l-Gp-Ldl-Dkf-Lg-Rc-VSb-FRu-Vl6s-MDty.jpg')"}}  className="h-screen">
+      <div style={{backgroundImage: "url('https://i.ibb.co/Wvqh8BG/images-1.jpg')"}}  className="h-screen bg-cover ">
         <div className="hero min-h-screen ">
           <div className="hero-content flex-col ">
             <div className="text-center lg:text-left">

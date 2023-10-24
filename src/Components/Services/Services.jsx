@@ -4,7 +4,7 @@ const Services = () => {
     return (
         <div className="mb-6">
           <h2 className="text-5xl font-bold text-center mb-10">Why CHoose Us</h2>
-        <div className="flex">
+        <div className="lg:flex">
             
             <div className="flex justify-between items-center mx-10 box mb-10">
                 <div className="font-bold text-slate-600">
