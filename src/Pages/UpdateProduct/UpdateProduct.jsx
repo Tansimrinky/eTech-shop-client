@@ -18,7 +18,7 @@ const UpdateProduct = () => {
         const description = form.description.value;
         const updatedProduct = { img, name, brandName, types, price, description, rating}
         console.log(updatedProduct)
-        fetch(`http://localhost:5000/products/${_id}`,{
+        fetch(`https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'

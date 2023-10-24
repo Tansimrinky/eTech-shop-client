@@ -7,7 +7,7 @@ const Brands = ({ brand }) => {
 
 
 
-   const handleBrands =  () => { fetch("http://localhost:5000/brands" , {
+   const handleBrands =  () => { fetch("https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/brands" , {
       method: 'POST',
       headers: {
         'content-type' : 'application/json'

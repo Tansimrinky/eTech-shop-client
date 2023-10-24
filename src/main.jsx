@@ -53,29 +53,29 @@ const router = createBrowserRouter([
       {
         path: '/brands/:brands_name',
         element: <BrandsProducts></BrandsProducts>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products')
       },
       {
         path: '/details/:_id',
         element: <Details></Details>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products')
 
       },
       {
         path: '/details/:_id',
         element: <DetailsCard></DetailsCard>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products')
 
       },
       {
         path: '/mycart',
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/mycart')
+        loader: () => fetch('https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/mycart')
       },
       {
         path: '/update/:id',
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params}) => fetch(`https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products/${params.id}`)
       }
     ]
   },

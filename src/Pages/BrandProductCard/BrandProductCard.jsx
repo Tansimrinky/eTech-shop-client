@@ -7,7 +7,7 @@ const BrandProductCard = ({ product }) => {
     product || {};
 
   //  const handleDetails = (_id) => {
-  //   fetch(`http://localhost:5000/products/${_id}`, {
+  //   fetch(`https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/products/${_id}`, {
   //     method: 'GET',
   //     headers: {
   //       'content-type' : 'application/json'

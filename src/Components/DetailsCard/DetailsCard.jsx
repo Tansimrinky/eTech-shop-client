@@ -28,7 +28,7 @@ const DetailsCard = ({ detail }) => {
         const propertyValue = `${user.email}`
         productObj[newProperty] = propertyValue
         console.log(productObj)
-        fetch('http://localhost:5000/mycart', {
+        fetch('https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/mycart', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

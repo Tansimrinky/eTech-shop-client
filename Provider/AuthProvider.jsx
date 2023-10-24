@@ -33,7 +33,7 @@ const AuthProvider = ({children}) => {
    }
 
    useEffect( () =>{
-    fetch("http://localhost:5000/brands")
+    fetch("https://et-ech-shop-server-side-34smdum6q-tansimrinky.vercel.app/brands")
     .then(res => res.json())
     .then(data => {
       console.log(data)

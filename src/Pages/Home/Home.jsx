@@ -10,6 +10,7 @@ import Services from "../../Components/Services/Services";
 
 
 const Home = () => {
+  
   const brands = useLoaderData()
   console.log(brands)
  
