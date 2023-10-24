@@ -4,6 +4,7 @@ import { FaCartPlus } from 'react-icons/fa';
 import { useLoaderData,  useParams} from "react-router-dom";
 import {useContext} from 'react'
 import { AuthContext } from "../../../Provider/AuthProvider";
+import PropTypes from 'prop-types';
 
 import Swal from 'sweetalert2'
 
@@ -86,5 +87,7 @@ const DetailsCard = ({ detail }) => {
     </div>
   );
 };
-
+DetailsCard.propTypes = {
+  detail : PropTypes.object
+}
 export default DetailsCard;

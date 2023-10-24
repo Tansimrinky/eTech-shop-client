@@ -1,5 +1,4 @@
 
-import { Navbar } from "@material-tailwind/react";
 import { useState, useEffect} from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsCard from "../../Components/DetailsCard/DetailsCard";

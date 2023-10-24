@@ -5,7 +5,6 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { useContext } from "react";
 import MyCartCard from "../../Components/MyCartCard/MyCartCard";
 
-import Footer from "../../Components/Footer/Footer";
 
 
 const MyCart = () => {
@@ -31,7 +30,7 @@ const MyCart = () => {
         
      }
       </div>
-      <Footer></Footer>
+      
     </div>
   );
 };
