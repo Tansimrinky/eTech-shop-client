@@ -3,7 +3,8 @@ import { useState } from "react";
 import NoData from "../NoData/NoData";
 
 const MyCartCard = ({ product }) => {
-  const { _id, img, name, brandName } = product || {};
+  const { _id, img, name, brandName, price } = product || {};
+  console.log(price)
   const [products, setItems] = useState();
   console.log(product);
   const handleDelete = (_id) => {
@@ -36,8 +37,11 @@ const MyCartCard = ({ product }) => {
 
   return (
     <div>
+      
       {product ? (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div>
+
+          <div className="card h-[500px] w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <img src={img} alt="Shoes" className="rounded-xl" />
           </figure>
@@ -53,6 +57,7 @@ const MyCartCard = ({ product }) => {
               </button>
             </div>
           </div>
+        </div>
         </div>
       ) : (
         <NoData></NoData>

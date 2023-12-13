@@ -6,28 +6,73 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [theme, setTheme] = useState(localStorage.getItem("theme")? localStorage.getItem("theme") : "light" )
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
 
   const handleToggle = (e) => {
-    if(e.target.checked){
-      setTheme("dark")
+    if (e.target.checked) {
+      setTheme("dark");
     } else {
-      setTheme("light")
+      setTheme("light");
     }
-  }
+  };
 
   useEffect(() => {
-    localStorage.setItem("theme", theme)
-    const localTheme = localStorage.getItem("theme")
-    document.querySelector("html").setAttribute("data-theme", localTheme)
-
-  }, [theme])
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
 
   const handleLogOut = () => {
     logOut().then().catch();
   };
   return (
     <nav className="lg:flex lg:justify-between sticky justify-center p-6 bg-slate-200 bg-rounded mb-5">
+      <div className="dropdown">
+        <label tabIndex={0} className="btn  btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h7"
+            />
+          </svg>
+        </label>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        >
+           <NavLink to="/">Home</NavLink>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/register">Register</NavLink>
+        {user && (
+          <>
+            <li className="list-none">
+              <NavLink to="/addproduct">Add Product </NavLink>
+            </li>
+            <li className="list-none flex">
+              <NavLink to="/mycart">
+                {" "}
+                <div className="flex items-center gap-1">
+                  <div>My cart</div>{" "}
+                  <div>
+                    <BsFillCartCheckFill></BsFillCartCheckFill>
+                  </div>
+                </div>{" "}
+              </NavLink>
+            </li>
+          </>
+        )}
+        </ul>
+      </div>
       <div>
         <h2 className="text-5xl font-bold text-center text-">
           ETechShop<span className="text-rose-700">.</span>{" "}
@@ -90,8 +135,7 @@ const Navbar = () => {
         )}
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
-          <input type="checkbox" onChange={handleToggle}
-           />
+          <input type="checkbox" onChange={handleToggle} />
 
           {/* sun icon */}
           <svg
